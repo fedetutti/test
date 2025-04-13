@@ -8,8 +8,9 @@ jobs:
     steps:
       - name: echo1
         shell: bash
-        run: echo "Se corre el step1"
-        exit 1
+        run: |
+          echo "Se corre el step1"
+          exit 1
       - name: echo2
         shell: bash
         run: echo "Se corre el step2"
