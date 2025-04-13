@@ -1,0 +1,29 @@
+name: Prueba
+on:
+  workflow_dispatch:
+jobs:
+  job1:
+    name: job 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo1
+        shell: bash
+        run: echo "Se corre el step1"
+        exit 1
+      - name: echo2
+        shell: bash
+        run: echo "Se corre el step2"
+  job2:
+    name: job 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo3
+        shell: bash
+        run: echo "Se corre el job2"
+  job3:
+    name: job 3
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo4
+        shell: bash
+        run: echo "Se corre el job3"
